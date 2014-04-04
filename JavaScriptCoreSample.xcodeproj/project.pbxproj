@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50147B0718EEA41A00B79DE9 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50147B0618EEA41A00B79DE9 /* JavaScriptCore.framework */; };
+		50147B0A18EEBA1500B79DE9 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147B0918EEBA1500B79DE9 /* NextViewController.m */; };
 		504FE9B818EE8F2900BC039D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9B718EE8F2900BC039D /* Foundation.framework */; };
 		504FE9BA18EE8F2900BC039D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9B918EE8F2900BC039D /* CoreGraphics.framework */; };
 		504FE9BC18EE8F2900BC039D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9BB18EE8F2900BC039D /* UIKit.framework */; };
@@ -19,6 +21,11 @@
 		504FE9D318EE8F2900BC039D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9BB18EE8F2900BC039D /* UIKit.framework */; };
 		504FE9DB18EE8F2900BC039D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 504FE9D918EE8F2900BC039D /* InfoPlist.strings */; };
 		504FE9DD18EE8F2900BC039D /* JavaScriptCoreSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FE9DC18EE8F2900BC039D /* JavaScriptCoreSampleTests.m */; };
+		504FE9E818EE98F400BC039D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FE9E718EE98F400BC039D /* RootViewController.m */; };
+		504FE9ED18EE9B3100BC039D /* NativeCallJavaScriptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FE9EC18EE9B3100BC039D /* NativeCallJavaScriptViewController.m */; };
+		504FE9F018EE9B4000BC039D /* JavaScriptCallNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FE9EF18EE9B4000BC039D /* JavaScriptCallNativeViewController.m */; };
+		504FE9F418EE9F5100BC039D /* JavaScriptCallNative.html in Resources */ = {isa = PBXBuildFile; fileRef = 504FE9F318EE9F5100BC039D /* JavaScriptCallNative.html */; };
+		504FE9F818EEA24400BC039D /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 504FE9F618EEA23500BC039D /* test.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50147B0618EEA41A00B79DE9 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		50147B0818EEBA1500B79DE9 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		50147B0918EEBA1500B79DE9 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		504FE9B418EE8F2900BC039D /* JavaScriptCoreSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaScriptCoreSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504FE9B718EE8F2900BC039D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		504FE9B918EE8F2900BC039D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +58,14 @@
 		504FE9D818EE8F2900BC039D /* JavaScriptCoreSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JavaScriptCoreSampleTests-Info.plist"; sourceTree = "<group>"; };
 		504FE9DA18EE8F2900BC039D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		504FE9DC18EE8F2900BC039D /* JavaScriptCoreSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JavaScriptCoreSampleTests.m; sourceTree = "<group>"; };
+		504FE9E618EE98F400BC039D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		504FE9E718EE98F400BC039D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		504FE9EB18EE9B3100BC039D /* NativeCallJavaScriptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeCallJavaScriptViewController.h; sourceTree = "<group>"; };
+		504FE9EC18EE9B3100BC039D /* NativeCallJavaScriptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeCallJavaScriptViewController.m; sourceTree = "<group>"; };
+		504FE9EE18EE9B4000BC039D /* JavaScriptCallNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptCallNativeViewController.h; sourceTree = "<group>"; };
+		504FE9EF18EE9B4000BC039D /* JavaScriptCallNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptCallNativeViewController.m; sourceTree = "<group>"; };
+		504FE9F318EE9F5100BC039D /* JavaScriptCallNative.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JavaScriptCallNative.html; sourceTree = "<group>"; };
+		504FE9F618EEA23500BC039D /* test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50147B0718EEA41A00B79DE9 /* JavaScriptCore.framework in Frameworks */,
 				504FE9BA18EE8F2900BC039D /* CoreGraphics.framework in Frameworks */,
 				504FE9BC18EE8F2900BC039D /* UIKit.framework in Frameworks */,
 				504FE9B818EE8F2900BC039D /* Foundation.framework in Frameworks */,
@@ -96,6 +115,7 @@
 		504FE9B618EE8F2900BC039D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50147B0618EEA41A00B79DE9 /* JavaScriptCore.framework */,
 				504FE9B718EE8F2900BC039D /* Foundation.framework */,
 				504FE9B918EE8F2900BC039D /* CoreGraphics.framework */,
 				504FE9BB18EE8F2900BC039D /* UIKit.framework */,
@@ -109,6 +129,10 @@
 			children = (
 				504FE9C618EE8F2900BC039D /* AppDelegate.h */,
 				504FE9C718EE8F2900BC039D /* AppDelegate.m */,
+				504FE9E618EE98F400BC039D /* RootViewController.h */,
+				504FE9E718EE98F400BC039D /* RootViewController.m */,
+				504FE9E918EE9AF100BC039D /* NativeCallJavaScript */,
+				504FE9EA18EE9AFF00BC039D /* JavaScriptCallNative */,
 				504FE9C918EE8F2900BC039D /* Images.xcassets */,
 				504FE9BE18EE8F2900BC039D /* Supporting Files */,
 			);
@@ -142,6 +166,28 @@
 				504FE9D918EE8F2900BC039D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		504FE9E918EE9AF100BC039D /* NativeCallJavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				504FE9EB18EE9B3100BC039D /* NativeCallJavaScriptViewController.h */,
+				504FE9EC18EE9B3100BC039D /* NativeCallJavaScriptViewController.m */,
+				504FE9F618EEA23500BC039D /* test.js */,
+			);
+			name = NativeCallJavaScript;
+			sourceTree = "<group>";
+		};
+		504FE9EA18EE9AFF00BC039D /* JavaScriptCallNative */ = {
+			isa = PBXGroup;
+			children = (
+				504FE9EE18EE9B4000BC039D /* JavaScriptCallNativeViewController.h */,
+				504FE9EF18EE9B4000BC039D /* JavaScriptCallNativeViewController.m */,
+				504FE9F318EE9F5100BC039D /* JavaScriptCallNative.html */,
+				50147B0818EEBA1500B79DE9 /* NextViewController.h */,
+				50147B0918EEBA1500B79DE9 /* NextViewController.m */,
+			);
+			name = JavaScriptCallNative;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +265,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504FE9F818EEA24400BC039D /* test.js in Resources */,
+				504FE9F418EE9F5100BC039D /* JavaScriptCallNative.html in Resources */,
 				504FE9C218EE8F2900BC039D /* InfoPlist.strings in Resources */,
 				504FE9CA18EE8F2900BC039D /* Images.xcassets in Resources */,
 			);
@@ -239,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504FE9F018EE9B4000BC039D /* JavaScriptCallNativeViewController.m in Sources */,
+				50147B0A18EEBA1500B79DE9 /* NextViewController.m in Sources */,
+				504FE9ED18EE9B3100BC039D /* NativeCallJavaScriptViewController.m in Sources */,
 				504FE9C818EE8F2900BC039D /* AppDelegate.m in Sources */,
 				504FE9C418EE8F2900BC039D /* main.m in Sources */,
+				504FE9E818EE98F400BC039D /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -346,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -360,6 +412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JavaScriptCoreSample/JavaScriptCoreSample-Prefix.pch";
 				INFOPLIST_FILE = "JavaScriptCoreSample/JavaScriptCoreSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,6 +426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JavaScriptCoreSample/JavaScriptCoreSample-Prefix.pch";
 				INFOPLIST_FILE = "JavaScriptCoreSample/JavaScriptCoreSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,6 +491,7 @@
 				504FE9E218EE8F2900BC039D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		504FE9E318EE8F2900BC039D /* Build configuration list for PBXNativeTarget "JavaScriptCoreSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +500,7 @@
 				504FE9E518EE8F2900BC039D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
