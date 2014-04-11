@@ -101,17 +101,32 @@ UIWebViewDelegate
     self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     
     // 禁用 页面元素选择
-    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+    //[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
     
     // 禁用 长按弹出ActionSheet
-    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+    //[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
     
     // Undocumented access to UIWebView's JSContext
-    
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    
+    // 打印异常
+    self.context.exceptionHandler =
+    ^(JSContext *context, JSValue *exceptionValue)
+    {
+        context.exception = exceptionValue;
+        NSLog(@"%@", exceptionValue);
+    };
+    
+    // 以 JSExport 协议关联 native 的方法
     self.context[@"native"] = self;
+    
+    // 以 block 形式关联 JavaScript function
+    self.context[@"log"] =
+    ^(NSString *str)
+    {
+        NSLog(@"%@", str);
+    };
 }
-
 
 #pragma mark - JSExport Methods
 
@@ -124,12 +139,6 @@ UIWebViewDelegate
     NSLog(@"%@", result);
     
     [self.context[@"showResult"] callWithArguments:@[result]];
-    
-}
-
-- (void)logSomething
-{
-    NSLog(@"logSomething");
 }
 
 - (void)pushToNextViewControllerWithTitle:(NSString *)title
@@ -139,7 +148,6 @@ UIWebViewDelegate
     [self.navigationController pushViewController:nextVC animated:YES];
 }
 
-
 #pragma mark - Factorial Method
 
 - (NSNumber *)calculateFactorialOfNumber:(NSNumber *)number
@@ -147,7 +155,7 @@ UIWebViewDelegate
     NSInteger i = [number integerValue];
     if (i < 0)
     {
-        return nil;
+        return [NSNumber numberWithInteger:0];
     }
 	if (i == 0)
     {

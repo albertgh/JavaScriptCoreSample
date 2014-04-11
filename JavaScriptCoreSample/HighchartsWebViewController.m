@@ -8,13 +8,7 @@
 
 #import "HighchartsWebViewController.h"
 
-#import <JavaScriptCore/JavaScriptCore.h>
-
-@interface HighchartsWebViewController ()
-<
-UIWebViewDelegate
-
->
+@interface HighchartsWebViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic) UIWebView *webView;
 
@@ -31,6 +25,8 @@ UIWebViewDelegate
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - Life Cycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -92,29 +88,6 @@ UIWebViewDelegate
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    
-}
-
-#pragma mark - Private Method
-
-- (void)loadChartsData
-{
-    // 装载数据
-    NSArray *the1024Data = @[@33, @41, @32, @51, @42, @103, @136];
-    NSDictionary *the1024Dict = @{@"name": @"1024", @"data": the1024Data};
-    
-    NSArray *theCCAVData = @[@8, @11, @21, @13, @20, @52, @43];
-    NSDictionary *theCCAVDict = @{@"name": @"CCAV", @"data": theCCAVData};
-    
-    NSArray *seriesArray = @[the1024Dict, theCCAVDict];
-    
-    [self.context[@"drawChart"] callWithArguments:@[seriesArray]];
-}
-
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -131,11 +104,34 @@ UIWebViewDelegate
     
     // 关联 JSContext
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.context[@"native"] = self;
+    
+    // 打印异常
+    self.context.exceptionHandler =
+    ^(JSContext *context, JSValue *exceptionValue)
+    {
+        context.exception = exceptionValue;
+        NSLog(@"%@", exceptionValue);
+    };
+    
     
     // 装载数据
     [self loadChartsData];
 }
 
+#pragma mark - Load Charts Data
+
+- (void)loadChartsData
+{
+    // 装载数据
+    NSArray *the1024Data = @[@33, @41, @32, @51, @42, @103, @136];
+    NSDictionary *the1024Dict = @{@"name": @"1024", @"data": the1024Data};
+    
+    NSArray *theCCAVData = @[@8, @11, @21, @13, @20, @52, @43];
+    NSDictionary *theCCAVDict = @{@"name": @"CCAV", @"data": theCCAVData};
+    
+    NSArray *seriesArray = @[the1024Dict, theCCAVDict];
+    
+    [self.context[@"drawChart"] callWithArguments:@[seriesArray]];
+}
 
 @end

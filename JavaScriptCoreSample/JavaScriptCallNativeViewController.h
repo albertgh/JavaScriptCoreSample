@@ -11,16 +11,13 @@
 @protocol TestJSExport <JSExport>
 
 JSExportAs
-(functionNameForJS,
+(functionNameForJS /** JavaScript function 的别名 */,
  
 - (void)handleFactorialCalculateWithNumber:(NSNumber *)number
  
 );
 
-- (void)logSomething;
-
 - (void)pushToNextViewControllerWithTitle:(NSString *)title;
-
 
 @end
 
