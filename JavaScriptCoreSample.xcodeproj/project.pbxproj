@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		50147B0718EEA41A00B79DE9 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50147B0618EEA41A00B79DE9 /* JavaScriptCore.framework */; };
 		50147B0A18EEBA1500B79DE9 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147B0918EEBA1500B79DE9 /* NextViewController.m */; };
+		5015769B18F6B20000EFA6E0 /* HighchartsView.html in Resources */ = {isa = PBXBuildFile; fileRef = 5015769818F6B20000EFA6E0 /* HighchartsView.html */; };
+		5015769C18F6B20000EFA6E0 /* HighchartsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5015769A18F6B20000EFA6E0 /* HighchartsWebViewController.m */; };
+		5042678818F79C150003E4FF /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 5042678618F79C150003E4FF /* highcharts.js */; };
+		5042678918F79C150003E4FF /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 5042678718F79C150003E4FF /* jquery-1.11.0.min.js */; };
 		504FE9B818EE8F2900BC039D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9B718EE8F2900BC039D /* Foundation.framework */; };
 		504FE9BA18EE8F2900BC039D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9B918EE8F2900BC039D /* CoreGraphics.framework */; };
 		504FE9BC18EE8F2900BC039D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504FE9BB18EE8F2900BC039D /* UIKit.framework */; };
@@ -42,6 +46,11 @@
 		50147B0618EEA41A00B79DE9 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		50147B0818EEBA1500B79DE9 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		50147B0918EEBA1500B79DE9 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		5015769818F6B20000EFA6E0 /* HighchartsView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HighchartsView.html; sourceTree = "<group>"; };
+		5015769918F6B20000EFA6E0 /* HighchartsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighchartsWebViewController.h; sourceTree = "<group>"; };
+		5015769A18F6B20000EFA6E0 /* HighchartsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighchartsWebViewController.m; sourceTree = "<group>"; };
+		5042678618F79C150003E4FF /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
+		5042678718F79C150003E4FF /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
 		504FE9B418EE8F2900BC039D /* JavaScriptCoreSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaScriptCoreSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504FE9B718EE8F2900BC039D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		504FE9B918EE8F2900BC039D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +102,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5015769718F6B1DC00EFA6E0 /* HighcharsWebView */ = {
+			isa = PBXGroup;
+			children = (
+				5015769818F6B20000EFA6E0 /* HighchartsView.html */,
+				5015769918F6B20000EFA6E0 /* HighchartsWebViewController.h */,
+				5015769A18F6B20000EFA6E0 /* HighchartsWebViewController.m */,
+			);
+			name = HighcharsWebView;
+			sourceTree = "<group>";
+		};
+		5042678418F79C150003E4FF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				5042678518F79C150003E4FF /* web_lib */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		5042678518F79C150003E4FF /* web_lib */ = {
+			isa = PBXGroup;
+			children = (
+				5042678618F79C150003E4FF /* highcharts.js */,
+				5042678718F79C150003E4FF /* jquery-1.11.0.min.js */,
+			);
+			path = web_lib;
+			sourceTree = "<group>";
+		};
 		504FE9AB18EE8F2900BC039D = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +163,14 @@
 		504FE9BD18EE8F2900BC039D /* JavaScriptCoreSample */ = {
 			isa = PBXGroup;
 			children = (
+				5042678418F79C150003E4FF /* Vendor */,
 				504FE9C618EE8F2900BC039D /* AppDelegate.h */,
 				504FE9C718EE8F2900BC039D /* AppDelegate.m */,
 				504FE9E618EE98F400BC039D /* RootViewController.h */,
 				504FE9E718EE98F400BC039D /* RootViewController.m */,
 				504FE9E918EE9AF100BC039D /* NativeCallJavaScript */,
 				504FE9EA18EE9AFF00BC039D /* JavaScriptCallNative */,
+				5015769718F6B1DC00EFA6E0 /* HighcharsWebView */,
 				504FE9C918EE8F2900BC039D /* Images.xcassets */,
 				504FE9BE18EE8F2900BC039D /* Supporting Files */,
 			);
@@ -265,9 +303,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5042678918F79C150003E4FF /* jquery-1.11.0.min.js in Resources */,
+				5042678818F79C150003E4FF /* highcharts.js in Resources */,
 				504FE9F818EEA24400BC039D /* test.js in Resources */,
 				504FE9F418EE9F5100BC039D /* JavaScriptCallNative.html in Resources */,
 				504FE9C218EE8F2900BC039D /* InfoPlist.strings in Resources */,
+				5015769B18F6B20000EFA6E0 /* HighchartsView.html in Resources */,
 				504FE9CA18EE8F2900BC039D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +333,7 @@
 				504FE9ED18EE9B3100BC039D /* NativeCallJavaScriptViewController.m in Sources */,
 				504FE9C818EE8F2900BC039D /* AppDelegate.m in Sources */,
 				504FE9C418EE8F2900BC039D /* main.m in Sources */,
+				5015769C18F6B20000EFA6E0 /* HighchartsWebViewController.m in Sources */,
 				504FE9E818EE98F400BC039D /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

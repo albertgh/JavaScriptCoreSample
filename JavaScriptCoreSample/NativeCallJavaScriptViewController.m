@@ -31,7 +31,7 @@
 - (void)buttonClicked:(id)sender
 {
     NSNumber *inputNumber = [NSNumber numberWithInteger:[self.inputNumberTextField.text integerValue]];
-    JSValue *function = self.context[@"factorial"];
+    JSValue *function = self.context[@"test"];
     JSValue *result = [function callWithArguments:@[inputNumber]];
     
     self.resultLabel.text = [NSString stringWithFormat:@"%@", [result toNumber]];
